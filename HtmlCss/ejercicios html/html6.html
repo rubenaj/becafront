@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>html6</title>
+</head>
+
+<body>
+    <h1>Formulario de registro</h1>
+    <form method="get">
+        <p><label>Nombre: <input type="text" name="nombre" required autofocus></label></p>
+        <p><label>Correo:<input type="email" name="Correo" size="50" maxlength="50" required></label></p>
+        <p><label>URL:<input type="text" name="URL" placeholder="Escribe la URL de tu pagina"></label></p>
+
+        <p><label>Poblacion:
+                <select name="Poblacion">
+                    <option value="1">Alicante</option>
+                    <option value="2">Elche</option>
+                    <option value="3">San Vicente</option>
+                </select>
+            </label></p>
+        <p><label>Fecha:<input type="date" value="fecha"></label></p>
+        <p><label>Tiempo:<input type="time" value="hora"></label></p>
+        <p><label>Fecha y Hora:<input type="datetime-local" value="fecha y hora"></label></p>
+        <p><label>Mes:<input type="month" value="mes"></label></p>
+        <p><label>Semana:<input type="week" value="semana"></label></p>
+        <p><label>Número(min -10, max10):<input type="number" name="semana" min="-10" max="10"></label></p>
+        <p><label>Telefono:<input type="tel" name="telefono"size="12" maxlength="12"></label></p>
+        <p><label>Termino de busqueda:<input type="search" name="busqueda"></label></p>
+        <p><label>Color favorito:<input type="color" name="color"></label></p>
+        <p><label><input type="submit" value="Enviar"></label></p>
+    </form>
+</body>
+
+</html>

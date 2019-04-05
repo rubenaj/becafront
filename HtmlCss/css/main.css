@@ -1,0 +1,14 @@
+#container{
+    background: pink;
+}
+
+.heading{
+    color: blue;
+}
+
+[class] {
+    font-size: 50px;
+}
+.main-heading{
+    color:red;
+}
