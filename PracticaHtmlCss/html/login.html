@@ -4,30 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
     <title>LOGIN</title>
 </head>
 <body>
-    <header>
-        <nav role="menubar">
-            <ul>
-                <li><a  href="../index.html" title="home">Casa</a></li>
-                <li><a  href="profile.html" title="profile">Profile</a></li>
-                <li><a  href="posts.html" title="posts">Posts</a></li>
-            </ul>
-        </nav>
-    </header> <!-- end header -->
+    <header id="header">
+        <div class="innertube">
+            <h1>My big blog</h1>
+        </div>
+    </header><!-- end header -->
+
     <main>
-        <form method=“POST”>
-            <label for="user1">USER</label>
-            <input type=“text” placeholder=“USER” maxlength="20"/>
-            <label for="password1">Password</label>
-            <input type="password" name="PASSWORD" placeholder="Password" maxlength="20">           
-            <button type="submit"><a href="../index.html"/> Submit</button>
-        </form>
+        <div class="innertube">
+            <form method=“POST”>
+                <div><label for="user1">USER</label><input type=“text” placeholder=“USER” maxlength="20"/></div>
+                <div><label for="password1">Password</label><input type="password" name="PASSWORD" placeholder="Password" maxlength="20"></div>           
+                <div><button type="submit"><a href="../index.html"/> Submit</button></div>
+            </form>
+        </div>
     </main> <!-- end main-->
-    <footer>
-            <p>Posted by: Rubén Andreu Juan</p>
-            <p>Contact information: <a href="https://github.com/rubenaj/becafront/tree/master/PracticaHtmlCss">https://github.com/rubenaj/becafront/tree/master/PracticaHtmlCss</a>.</p>
+
+    <nav id="nav">
+        <div class="innertube">
+        </div>
+    </nav> <!-- end nav-->
+
+    <footer id="footer">
+        <div class="innertube">
+            <p>Posted by:<a href="https://github.com/rubenaj/becafront/tree/master/PracticaHtmlCss"> Rubén Andreu Juan</a></p>
+        </div>
     </footer>  <!-- end footer-->
 </body>
 </html>
