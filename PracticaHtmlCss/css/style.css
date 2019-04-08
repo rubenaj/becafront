@@ -23,7 +23,7 @@ main {
   top: 0;
   left: 0;
   width: 120%;
-  height: 150px;
+  height: 25%;
   overflow: hidden; /* Disables scrollbars on the header frame. To enable scrollbars, change "hidden" to "scroll" */
   background: #bcce98;
   justify-content: space-between;
@@ -52,6 +52,12 @@ main {
 .innertube {
   margin: 15px; /* Provides padding for the content */
 }
+
+header .innertube {
+  display: flex;
+  justify-content: center;
+}
+
 p {
   color: #555;
 }
