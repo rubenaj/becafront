@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- console--todos los numero entre pequeños y grande
+    document.write--cuantos pares con %
+    document.write--cuantos impares
+    alert--suma total-->
+    <script>
+    
+      let numero1 = prompt("dime el primer numero");
+      let numero2 = prompt("dime el segundo numero");
+
+      if (numero1 == numero2 ) {
+        document.write(
+          "Numero 1, Numero 2 son iguales y vale: " + numero1 + "."
+        );
+      } else {
+        if (numero1 > numero2) {
+            console.log("Numero 1 es Mayor y vale: " + numero1 + ".");
+        }
+        else if (numero2 > numero1) {
+            console.log("Numero 2 es Mayor y vale: " + numero2 + ".");
+          }
+      }
+        if(numero1 % 2 == 0 && numero % 2 == 0) {
+        document.write ('es par los' +numero1+ 'y' +numero2 );
+        }
+        else {
+            document.write( 'es par los' +numero1+ 'y' +numero2 );
+;
+        }
+
+      console.log(
+        "<br /><br />Numero 1 = " + numero1 + "<br />" + "Numero 2 = " + numero2 
+      );
+      
+      
+    </script>
+  </body>
+</html>
