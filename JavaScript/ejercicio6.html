@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div class ="encabezado" id="encabezadoFactura">
+        <label class="nombre">Luis Martínez González</label>
+        <label class="telefono">965111222</label>
+        <label class="numerosFactura">1250</label>
+    </div>
+    <script>
+    document.getElementById("encabezadoFactura").className="resalta"
+   
+  
+      let div = document.querySelector("div");
+      div.setAttribute("class", "resalta");
+
+      let factura = div.getElementsByClassName("numeroFactura");
+      console.log(factura[0].textContent);
+      let  facturaNew = +factura[0].textContent + 1;
+      console.log(facturaNew);
+      factura[0].innerHTML = facturaNew;
+
+
+    </script>
+</body>
+</html>
