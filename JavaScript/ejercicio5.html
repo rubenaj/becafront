@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div1">
+        <p>
+            <a class="normalLink" href="hello.html" title="hello world">Hello World</a>
+            <a class="normalLink" href="bye.html" title="bye world">Bye World</a>
+            <a class="normalLink" href="helloagain.html" title="hello again">Hello Again World</a>
+        </p>
+    </div>
+    <script>
+        console.log(document.querySelector("title").text);
+        
+        let world = document.querySelectorAll("a[title$='world']");
+        world.forEach(function(elem){console.log(elem.title);});
+    </script>
+</body>
+</html>         
