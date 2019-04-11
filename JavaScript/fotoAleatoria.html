@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        
+    <img src="mAnocerrada.jpg" id="imagen" onmouseover="imagen2();" onmouseout="iniciar();">
+              
+        <script>
+        window.addEventListener('load', iniciar, false);
+
+                function iniciar(){
+                  var imagen=document.getElementById('imagen');
+                  imagen.addEventListener('mouseover', imagen2, false);
+                }
+                
+                function imagen2(){
+                  var imagen=document.getElementById('imagen').src="ok.jpeg";
+                }
+               
+
+        </script>
+</body>
+</html>
