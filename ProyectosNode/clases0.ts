@@ -1,4 +1,4 @@
-class Programa
+class Programas1
 {
     public nombre: string;
     public version: number;

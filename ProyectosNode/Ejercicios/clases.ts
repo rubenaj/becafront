@@ -3,7 +3,12 @@ class Programa
     public nombre: string;
     public version: number;
 
-    
+    constructor(nombre:string, version: number)
+    {
+        this.nombre=nombre;
+        this.version=version;
+    }
+
     getNombre(){
         return this.nombre;
     }
@@ -24,7 +29,12 @@ class Programa
 
 class EditorVideo extends Programa{
     public timeline:number;
-
+    
+    constructor(timeline:number, nombre:string, version: number)
+    {
+        super(nombre, version);
+        this.timeline=timeline;
+    }
    
     setTimeLine(timeline:number){
         this.timeline=timeline;
@@ -40,10 +50,10 @@ class EditorVideo extends Programa{
 
 }
 
-var editor = new EditorVideo();
-editor.setNombre("Camtasia Studio");
-editor.setVersion(8);
-editor.setTimeLine(4000);
+var editor = new EditorVideo(4000,"Camtasia video",8);
+// editor.setNombre("Camtasia Studio");
+// editor.setVersion(8);
+// editor.setTimeLine(4000);
 
 console.log(editor.getAllData());
 
