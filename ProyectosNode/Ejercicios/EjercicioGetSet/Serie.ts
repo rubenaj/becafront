@@ -1,18 +1,18 @@
 class Serie
 {
-  private titulo:string;
+  private titulos:string;
   private numCapitulo:number;
   
   constructor(titulo:string, numCapitulo:number)
   {
-      this.titulo=titulo;
+      this.titulos=titulo;
       this.numCapitulo=numCapitulo;
   }
   gettitulo(){
-      return this.titulo;
+      return this.titulos;
   }
   settitulo(titulo:string){
-      return this.titulo=titulo;
+      return this.titulos=titulo;
   }
   getnumCapitulo(){
       return this.numCapitulo;
