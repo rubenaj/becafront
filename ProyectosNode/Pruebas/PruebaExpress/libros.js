@@ -3,7 +3,16 @@ const archivo = 'libros.json';
 const express = require('express');
 let router = express.Router();
 
-
+let buscarLibroPorId =(id) => {
+    return new Promise((resolve, reject) =>
+    // let libros = cargar libros();
+    cargarLibros().then(libros =>{
+        let resultado = libros.filter((libro) => libro.lenght);
+        if (resultado.lenght >0 )
+        resolve (resultado[0])
+        else 
+    }))
+}
 
 let cargarLibros = () => {
     try{
@@ -15,16 +24,23 @@ let cargarLibros = () => {
 };
 
 let nuevoLibro = (id, titulo, autor, precio) => {
-    if (!buscarLibroPorId(id)){ //solo entra si el libro no está
-        let libros = cargarLibros();
+    return new Promise ((resolve, reject) => {
+        // let libros  = cargar
+        buscarLibroPorId(id).then(libros => {
+            reject("el libro a insertar ya existe");
+        }).catch{
+            cargarLibros().then(resultado => {
+                
         let nuevo = {
             id: id,
             titulo: titulo,
             autor: autor,
             precio: precio
         };
-        libros.push(nuevo);
-        guardarLibros(libros);
+        resultado.push(nuevo);
+        guardarLibros(resultado);
         return true;
-    }
- };
+        });
+    });
+    });
+}
