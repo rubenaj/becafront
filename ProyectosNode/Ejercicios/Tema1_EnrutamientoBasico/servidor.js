@@ -7,9 +7,6 @@ var atenderPeticion = (request, response) => {
 
   var navegador = request.headers['user-agent'];
 
-
-
-
   if (request.url == '/') {
     response.writeHead(200, { "Content-Type": "text/html" });
     var contenido = fs.readFileSync('./index.html', 'utf8');
