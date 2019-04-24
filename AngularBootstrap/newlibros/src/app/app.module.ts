@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './template/header/header.component';
 import { FooterComponent } from './template/footer/footer.component';
 import { HomeComponent } from './pages/home/home.component';
-import { InfantilesComponent } from './pages/infantiles/infantiles.component';
+import { InfantilComponent } from './pages/infantil/infantil.component';
 import { TerrorComponent } from './pages/terror/terror.component';
 
 @NgModule({
@@ -15,7 +15,7 @@ import { TerrorComponent } from './pages/terror/terror.component';
     HeaderComponent,
     FooterComponent,
     HomeComponent,
-    InfantilesComponent,
+    InfantilComponent,
     TerrorComponent
   ],
   imports: [

@@ -1,3 +1,17 @@
 <div class="container text-center"> 
-  <p>ruben terror</p>
-</div>
+  <h1>Libros Terror</h1> 
+  
+
+  <div class="container">
+    <div *ngFor="let libro of librosTerror; let i = index" class="row">
+      <div class="col-sm">
+        {{libro.libro}}
+      </div>
+      <div class="col-sm">
+        {{libro.autor}}
+      </div>
+      <div class="col-sm">
+        {{libro.precio}}
+      </div>
+    </div>
+  </div>
