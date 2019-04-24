@@ -1,0 +1,25 @@
+<div class="container text-center"> 
+  <h1>Libros Infantil</h1> 
+  
+
+  <div class="container">
+    <div *ngFor="let libro of librosInfantil; let i = index" class="row">
+      <div class="col-sm">
+        {{libro.libro}}
+      </div>
+      <div class="col-sm">
+        {{libro.autor}}
+      </div>
+      <div class="col-sm">
+        {{libro.precio}}
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+</div>
+
