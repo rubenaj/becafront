@@ -3,15 +3,17 @@
   
 
   <div class="container">
-    <div *ngFor="let libro of librosInfantil; let i = index" class="row">
-      <div class="col-sm">
-        {{libro.libro}}
-      </div>
-      <div class="col-sm">
-        {{libro.autor}}
-      </div>
-      <div class="col-sm">
-        {{libro.precio}}
+    <div *ngFor="let libro of librosInfantil; let i = index">
+      <div class="row" *ngIf="libro.autor == 'Orson Scott Card'">
+        <div class="col-sm">
+          {{libro.titulo}}
+        </div>
+        <div class="col-sm">
+          {{libro.autor}}
+        </div>
+        <div class="col-sm">
+          {{libro.precio}}
+        </div>
       </div>
     </div>
   </div>
