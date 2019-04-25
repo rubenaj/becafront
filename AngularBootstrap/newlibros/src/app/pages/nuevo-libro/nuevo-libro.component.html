@@ -1,0 +1,18 @@
+<h1>FORMULARIO</h1>
+<div class="col-md-6 mb-6">
+   
+   <div class="form-group">
+     <label for="inputTitle">Title</label>
+     <input type="text" class="form-control" id="inputTitle" placeholder="Titulo" [(ngModel)]="libro.titulo">
+   </div>
+   <div class="form-group">
+     <label for="">Author</label>
+     <label for="">Author</label>
+     <input type="text" class="form-control" id="inputAddress2" placeholder="Autor" [(ngModel)]="libro.autor">
+   </div>
+   <div class="form-group">
+       <label for="inputPrice">Price</label>
+       <input type="text" class="form-control" id="inputPrice" placeholder="Precio" [(ngModel)]="libro.precio">
+     </div>
+     <button type="" class="btn btn-primary" (click)="enviar();">Create</button>
+ </div>

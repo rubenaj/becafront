@@ -2,24 +2,24 @@ import { Component, OnInit } from '@angular/core';
 import { DataService } from '../../data.service'
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+ selector: 'app-home',
+ templateUrl: './home.component.html',
+ styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+ libros:any;
 
-  libros: any;
-  constructor(private data: DataService) { }
-  ngOnInit() {
-    // this.libros=[
-    //   {libro: 'libro1', autor: 'autor1', precio: '9.9'},
-    //   {libro: 'libro2', autor: 'autor2', precio: '19.9'},
-    //   {libro: 'libro3', autor: 'autor3', precio: '7.9'}
-    // ];
-    {
-      this.data.getLibros().subscribe(data =>{
-        this.libros = data;
-      });
-    }
-  }
-  }
+ constructor(private data:DataService) { }
+ ngOnInit() {
+ //   this.libros=[
+ //     {libro: 'libro1', autor: 'autor1', precio: '9.9'},
+ //     {libro: 'libro2', autor: 'autor2', precio: '19.9'},
+ //     {libro: 'libro3', autor: 'autor3', precio: '7.9'}
+ //   ];
+
+ this.data.getLibros().subscribe(data => {
+   this.libros = data;
+ })
+ }
+
+}
