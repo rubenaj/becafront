@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<widget xmlns   = "http://www.w3.org/ns/widgets"
+    xmlns:gap   = "http://phonegap.com/ns/1.0"
+    id          = "com.javiergarciaguardiola.calculator"
+    versionCode = "1"
+    version     = "0.0.1">
+
+    <name>Calculator!</name>
+
+    <description>
+      A simple calculator.
+    </description>
+    <platform name="android">
+        <icon density="ldpi" src="res/icon/android/ldpi.png"/>
+        <icon density="mdpi" src="res/icon/android/mdpi.png"/>
+        <icon density="hdpi" src="res/icon/android/hdpi.png"/>
+        <icon density="xhdpi" src="res/icon/android/xhdpi.png"/>
+        <icon density="xxhdpi" src="res/icon/android/xxhdpi.png"/>
+        <icon density="xxxhdpi" src="res/icon/android/xxxhdpi.png"/>
+    </platform>
+    <author href="" email="rubenaj88@gmail.com">
+      ruben Andreu Juan
+    </author>
+
+    <access origin="*" />
+    <plugin name="cordova-plugin-whitelist" />
+    <plugin name="cordova-plugin-vibration" />
+</widget>
