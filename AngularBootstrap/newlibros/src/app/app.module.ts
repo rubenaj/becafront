@@ -1,3 +1,4 @@
+import { ContactComponent } from './../../../my/src/app/pages/contact/contact.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
@@ -10,6 +11,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { InfantilComponent } from './pages/infantil/infantil.component';
 import { TerrorComponent } from './pages/terror/terror.component';
 import { NuevoLibroComponent } from './pages/nuevo-libro/nuevo-libro.component';
+import { ContactarComponent} from './pages/contactar/contactar.component';
 import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
@@ -19,6 +21,7 @@ import { FormsModule } from '@angular/forms';
     HomeComponent,
     InfantilComponent,
     TerrorComponent, 
+    ContactarComponent,
     NuevoLibroComponent,
     
   ],

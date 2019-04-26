@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 
 //const autores = require('./routes/autor');
 const libros = require('./routes/libro');
-
+const correo = require('./routes/correo');
 //mongoose.Promise = global.Promise;
 //mongoose.connect('mongodb://localhost:27017/libros', {useMongoClient: true});
 
@@ -22,5 +22,6 @@ app.use((req, res, next) => {
 app.use(bodyParser.json());
 //app.use('/autores', autores);
 app.use('/libros', libros);
+app.use('/correo',correo);
 
 app.listen(8080);

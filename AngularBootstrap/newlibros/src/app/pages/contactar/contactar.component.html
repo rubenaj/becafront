@@ -1,0 +1,17 @@
+<h1>CONTACTAR</h1>
+<div class="col-md-6 mb-6">
+    
+   <div class="form-group">
+     <label for="inputnombre">Nombre</label>
+     <input type="text" class="form-control" id="inputnombre" placeholder="Nombre" [(ngModel)]="correo.text">
+   </div>
+   <div class="form-group">
+     <label for="inputEmail">Email</label>
+     <input type="email" class="form-control" id="inputEmail" placeholder="Email"  [(ngModel)]="correo.email">
+   </div>
+   <div class="form-group">
+       <label for="inputComentario">Comentario</label>
+       <textarea class="form-control" rows="5" id="comment" [(ngModel)]="correo.subject"></textarea>
+     </div>
+     <button type="" class="btn btn-primary" (click)="enviar();">Enviar</button>
+ </div>
