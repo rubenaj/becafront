@@ -1,7 +1,6 @@
 const express = require('express');
   
 let router = express.Router();
-var nodemailer = require('nodemailer');
 router.post('/', (req, res) => {
   var nodemailer = require('nodemailer');
   var transporter = nodemailer.createTransport({

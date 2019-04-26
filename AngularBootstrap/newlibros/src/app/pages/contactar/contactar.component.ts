@@ -16,6 +16,7 @@ export class ContactarComponent implements OnInit {
     }
   
   enviar(){
+    this.correo.text=this.correo.email+" "+this.correo.text;
     this.data.enviarCorreo(this.correo).subscribe(data =>{
        console.log(data);
    });
