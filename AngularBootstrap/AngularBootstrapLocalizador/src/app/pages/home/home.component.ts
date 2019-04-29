@@ -1,5 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
-import { prepareSyntheticListenerFunctionName } from '@angular/compiler/src/render3/util';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
  selector: 'app-home',
@@ -7,9 +6,10 @@ import { prepareSyntheticListenerFunctionName } from '@angular/compiler/src/rend
  styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
- reorder: boolean;
+ //reorder: boolean;
  list: any;
  text: string;
+
  constructor() {
    this.text = "";
    this.list = localStorage.getItem('places-list');

@@ -1,8 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { RouteReuseStrategy } from '@angular/router';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './template/header/header.component';
@@ -21,11 +19,10 @@ import { HomeComponent } from './pages/home/home.component';
     BrowserModule,
     AppRoutingModule,
   ],
-  providers: [
+  providers: [],
     // StatusBar,
     // SplashScreen,
     // Camera,
-    { provide: RouteReuseStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,7 +1,15 @@
+<br>
 <div class="container text-center"> 
- <input type ="text"/>
- <input type= "file" (change)=""/>
- <ul>
-   <li *ngFor=""></li>
+ <div>
+  <input type ="text"/>
+ <input type= "file" (change)="add($event)"/>
+ 
+</div> 
+<ul>
+    <li *ngFor="let item of list ">
+        <a [href]="item.url"><img [src]="item.img"/></a>
+        {{item.name}}
+        <button class="btn btn-danger" (click)="delete()"></button>
+      </li>
  </ul>
 </div>
