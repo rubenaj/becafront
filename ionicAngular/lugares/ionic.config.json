@@ -1,0 +1,7 @@
+{
+  "name": "lugares",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
