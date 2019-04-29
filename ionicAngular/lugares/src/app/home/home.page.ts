@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { List, LoadingController } from '@ionic/angular';
+import { IonList, LoadingController } from '@ionic/angular';
 import { Camera, CameraOptions } from '@ionic-native/camera/ngx';
 @Component({
   selector: 'app-home',
@@ -7,7 +7,7 @@ import { Camera, CameraOptions } from '@ionic-native/camera/ngx';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-  @ViewChild('myList') listRef: List;
+  @ViewChild('myList') listRef: IonList;
   reorder: boolean;
   list: any;
   text: string;
