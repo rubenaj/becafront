@@ -12,6 +12,7 @@ export class BooksService {
   constructor() {
     var storage = localStorage.getItem('books-list');
     if (storage) this.list = JSON.parse(storage);
+    console.log(this.list);
   }
   add(book:any) {
     this.list.unshift(book);

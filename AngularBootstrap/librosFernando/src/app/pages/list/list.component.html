@@ -1,3 +1,12 @@
-<p>
-  list works!
-</p>
+<div class="container">
+  <input type="text" class="form-control" [(ngModel)]="search">
+  <div class="card-deck">
+    <a class="card p-3" style="width: 18rem;" *ngFor="let book of list | includes:search" [href]="book.url">
+      <img [src]="book.img" class="card-img-top" alt="book.title">
+      <div class="card-body">
+        <h5 class="card-title">{{book.title}}</h5>
+        <p class="card-text">{{book.author}} - {{book.price}}</p>
+      </div>
+    </a>
+  </div>
+ </div>
