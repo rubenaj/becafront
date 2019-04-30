@@ -1,18 +1,28 @@
 <h1>FORMULARIO</h1>
-<!-- <div class="col-md-6 mb-6">
-    
+<div class="col-md-6 mb-6">
+  <div class="form-group">
+    <label for="inputTitle">ID</label>
+    <input type="text" class="form-control" id="inputTitle" placeholder="ID" [(ngModel)]="book.id">
+  </div>
    <div class="form-group">
      <label for="inputTitle">Title</label>
-     <input type="text" class="form-control" id="inputTitle" placeholder="Titulo" [{ngModel}]="libro.titulo">
+     <input type="text" class="form-control" id="inputTitle" placeholder="Titulo" [(ngModel)]="book.title">
    </div>
    <div class="form-group">
      <label for="">Author</label>
-     <label for="">Author</label>
-     <input type="text" class="form-control" id="inputAddress2" placeholder="Autor" [{ngModel}]="libro.autor">
+     <input type="text" class="form-control" id="inputAddress2" placeholder="Autor" [(ngModel)]="book.author">
    </div>
    <div class="form-group">
        <label for="inputPrice">Price</label>
-       <input type="text" class="form-control" id="inputPrice" placeholder="Precio" [{ngModel}]="libro.precio">
+       <input type="text" class="form-control" id="inputPrice" placeholder="Precio" [(ngModel)]="book.price">
      </div>
+     <div class="form-group">
+      <label for="inputPrice">URL DE IMAGEN</label>
+      <input type="text" class="form-control" id="inputPrice" placeholder="IMAGE URL" [(ngModel)]="book.img">
+    </div>
+    <div class="form-group">
+      <label for="inputPrice">URL</label>
+      <input type="text" class="form-control" id="inputPrice" placeholder="URL" [(ngModel)]="book.url">
+    </div>
      <button type="" class="btn btn-primary" (click)="enviar();">Create</button>
- </div> -->
+ </div>

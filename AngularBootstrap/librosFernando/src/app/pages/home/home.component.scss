@@ -1,0 +1,33 @@
+/* .carousel-control-prev-icon,
+.carousel-control-next-icon {
+height: 100px;
+width: 100px;
+outline: black;
+background-size: 100%, 100%;
+border-radius: 50%;
+border: 1px solid black;
+background-image: none;
+}
+img{
+margin: auto;
+}
+.carousel-control-next-icon:after
+{
+content: '>';
+font-size: 55px;
+color:black;
+}
+/* .carousel-control-prev-icon:after {
+content: '<';
+font-size: 55px;
+color: black;
+} */ 
+
+img {
+    margin:auto;
+ }
+ .carousel-control-prev{/* .carousel-indications,
+ .carousel-caption,
+ .carousel-control-next,.carousel-indicators{ */
+    filter: invert(100%);
+ }
