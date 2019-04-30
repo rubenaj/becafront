@@ -11,7 +11,7 @@ export class AddComponent implements OnInit {
  
   book:any =  { id: 0, title:'', author:'', price:0, img:'', url:'' };
 
-  constructor(private books: BooksService) { }
+  constructor(public books: BooksService) { }
 
   ngOnInit() {
    }
