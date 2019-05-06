@@ -59,37 +59,30 @@ let nuevoLibro = (id, titulo, autor, precio, img, url) => {
 
 let borrarLibro = (id) => {
     return newPromise((resolve,reject) => {
+        buscarLibroPorId(id).then(libroBorrar => {
         cargarLibros().then(libros =>{
-    let librosFiltrados = libros.filter((libro) => libro.id != id);
-    if (librosFiltrados.length !== libros.length)
-        guardarLibros(librosFiltrados);
-        resolve("libro eliminado, nuevo lista " + librosFiltrados.lenght !== libros.lenght);
-    }).catch(error =>{
-        reject("el libro no se ha podido eliminar")
-    })
-})
-};
+            let resultado = libros.filter((libro) => libro.id == id);
+            if (resultado.length > 0)
+                resolve(resultado[0]);
+
+        else
+            reject("El libro ya existe, no se puede insertar");
+    });
+});
 
 let modificarLibro = (id, titulo, autor, precio, img, url) => {
 	return new Promise((resolve, reject) => {
-		buscarLibroPorId(!id).then(libros => {
-			reject("El libro ha modificar no existe");
+		buscarLibroPorId(id).then(libroBorrar  => {
+            borrarLibro(id).then(libros => {
+                nuevoLibro(id,titulo,autor,precio,img,url).then(resultado);
+                    resolve (resultado);
+                })   
+			
 		}).catch(error => {
-			cargarLibros().then(resultado => {
-				let nuevo = {
-					id: id,
-					titulo: titulo,
-					autor: autor,
-                    precio: precio,
-                    img: img,
-                    url: url,
-				};
-				resultado.push(nuevo);
-                guardarLibros(resultado);
-                resolve(nuevo);				
+			reject("El libro ha modificar no existe");
+						
 			});
         });
-    });
 }
 
 /*
@@ -143,13 +136,13 @@ router.post('/', (req, res) => {
     });
 });
 
-// router.put('/', (req, res) => {
-//     modificarLibro(req.body.id, req.body.titulo,req.body.autor, req.body.precio).then(resultado => {
-//         res.send({error: false, resultado: resultado});
-//     }).catch(error => {
-//         res.send({error: true, mensajeError:"Error añadiendo libro"});
-//     });
-// });
+ router.put('/', (req, res) => {
+     modificarLibro(req.body.id, req.body.titulo,req.body.autor, req.body.precio).then(resultado => {
+         res.send({error: false, resultado: resultado});
+     }).catch(error => {
+         res.send({error: true, mensajeError:"Error añadiendo libro"});
+     });
+ });
 
  router.delete('/:id', (req, res) => {
    borrarLibro(req.params.id).then(resultado => {
