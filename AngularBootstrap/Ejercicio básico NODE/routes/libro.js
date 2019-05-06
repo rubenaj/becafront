@@ -34,8 +34,8 @@ let buscarLibroPorId = (id) => {
         });
     });
 }
-
-let nuevoLibro = (id, titulo, autor, precio) => {
+ 
+let nuevoLibro = (id, titulo, autor, precio, img, url) => {
 	return new Promise((resolve, reject) => {
 		buscarLibroPorId(id).then(libros => {
 			reject("El libro a inserta ya existe");
@@ -45,7 +45,44 @@ let nuevoLibro = (id, titulo, autor, precio) => {
 					id: id,
 					titulo: titulo,
 					autor: autor,
-					precio: precio
+                    precio: precio,
+                    img: img,
+                    url: url,
+				};
+				resultado.push(nuevo);
+                guardarLibros(resultado);
+                resolve(nuevo);				
+			});
+        });
+    });
+}
+
+let borrarLibro = (id) => {
+    return newPromise((resolve,reject) => {
+        cargarLibros().then(libros =>{
+    let librosFiltrados = libros.filter((libro) => libro.id != id);
+    if (librosFiltrados.length !== libros.length)
+        guardarLibros(librosFiltrados);
+        resolve("libro eliminado, nuevo lista " + librosFiltrados.lenght !== libros.lenght);
+    }).catch(error =>{
+        reject("el libro no se ha podido eliminar")
+    })
+})
+};
+
+let modificarLibro = (id, titulo, autor, precio, img, url) => {
+	return new Promise((resolve, reject) => {
+		buscarLibroPorId(!id).then(libros => {
+			reject("El libro ha modificar no existe");
+		}).catch(error => {
+			cargarLibros().then(resultado => {
+				let nuevo = {
+					id: id,
+					titulo: titulo,
+					autor: autor,
+                    precio: precio,
+                    img: img,
+                    url: url,
 				};
 				resultado.push(nuevo);
                 guardarLibros(resultado);
@@ -106,4 +143,22 @@ router.post('/', (req, res) => {
     });
 });
 
+// router.put('/', (req, res) => {
+//     modificarLibro(req.body.id, req.body.titulo,req.body.autor, req.body.precio).then(resultado => {
+//         res.send({error: false, resultado: resultado});
+//     }).catch(error => {
+//         res.send({error: true, mensajeError:"Error añadiendo libro"});
+//     });
+// });
+
+ router.delete('/:id', (req, res) => {
+   borrarLibro(req.params.id).then(resultado => {
+         if (resultado)
+             res.send({error: false, resultado: resultado});
+         else
+             res.send({error: true, mensajeError: "Libro no eliminado"});
+     }).catch(error => {
+         res.send({error: true, mensajeError:"Error eliminando libro "+error});
+     });
+});
 module.exports = router;
